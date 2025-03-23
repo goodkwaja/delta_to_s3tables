@@ -25,7 +25,9 @@ PROPERTIES='{
     "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.delta.catalog.DeltaCatalog",
     "spark.sql.catalog.'${TARGET_DB}'": "org.apache.iceberg.spark.SparkCatalog",
     "spark.sql.catalog.'${TARGET_DB}'.catalog-impl": "software.amazon.s3tables.iceberg.S3TablesCatalog",
-    "spark.emr-serverless.executor.disk": "100g",
+    "spark.executor.cores": "16",
+    "spark.executor.memory": "64G",
+    "spark.emr-serverless.executor.disk": "1000g",
     "spark.emr-serverless.executor.disk.type": "shuffle_optimized"'
 
 # S3Tables 형식일 경우 warehouse 설정 추가
