@@ -46,7 +46,7 @@ echo "----------------------------------------"
 
 # Spark Submit 실행
 spark-submit "${SPARK_CONFIGS[@]}" \
-    s3://2025-jobkorea-data/code/to_migration.py \
+    ./to_migration.py \
     "$SOURCE_DB" \
     "$TARGET_DB" \
     "$OUTPUT_PATH" \

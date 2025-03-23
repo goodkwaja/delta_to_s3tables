@@ -37,7 +37,7 @@ aws emr add-steps \
             "--conf", "spark.sql.catalog.'${TARGET_DB}'.catalog-impl=software.amazon.s3tables.iceberg.S3TablesCatalog",
             "--conf", "spark.sql.defaultCatalog='${TARGET_DB}'",
             "--conf", "spark.sql.catalog.'${TARGET_DB}'.warehouse='${OUTPUT_PATH}'",
-            "s3://2025-jobkorea-data/code/to_migration.py",
+            "./to_migration.py",
             "'${SOURCE_DB}'",
             "'${TARGET_DB}'",
             "'${OUTPUT_PATH}'",
