@@ -52,7 +52,7 @@ def process_table(table):
         schema_name = table.table_schema
         table_name = table.table_name
         source_path = f"{catalog_name}.{schema_name}.{table_name}"
-        database_name = f"dbx.{catalog_name}.{schema_name}"
+        database_name = f"dbx_{catalog_name}_{schema_name}"
         
         # 테이블 메타데이터 수집
         detail = spark.sql(f"DESCRIBE DETAIL {source_path}").collect()[0]
